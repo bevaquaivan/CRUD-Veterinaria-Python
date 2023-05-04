@@ -42,8 +42,9 @@ class Mascota(models.Model):
     nombre_mascota = models.CharField(verbose_name='Nombre de la Mascota', max_length=255,)
     fecha_nacimiento = models.DateField(verbose_name='Fecha de nacimiento')
     tipo_mascota = models.ForeignKey(TipoMascota,verbose_name='Tipo de Mascota', on_delete=models.PROTECT,)
-    estado = models.BooleanField(verbose_name="Estado")
     color = models.CharField(verbose_name='Color de la Mascota', max_length=100, null=True)
+    estado = models.BooleanField(verbose_name="Estado")
+
     
     def __str__(self):
         return f"{self.nombre_mascota} {self.propietario}"
