@@ -1,9 +1,11 @@
 from django.urls import path
-
 from . import views
 
-urlpatterns = [
-    path("", views.inicio, name="inicio"),
-    path("cliente", views.cliente, name="cliente"),
+app_name = 'Veterinaria'
 
-]
+
+urlpatterns = [
+    path('', views.home, name= "home"),
+    path('cliente', views.cliente, name= "cliente"),
+    path('editarcliente/<int:id>', views.editarcliente, name='editarcliente'),
+    ]
