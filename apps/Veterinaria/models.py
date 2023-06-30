@@ -61,4 +61,4 @@ class HistoriaClinica(models.Model):
     observaciones = models.CharField(verbose_name='Observaciones Realizadas', max_length=400)
     
     def __str__(self):
-        return f"{self.mascota}"
+        return f"{self.mascota}" 

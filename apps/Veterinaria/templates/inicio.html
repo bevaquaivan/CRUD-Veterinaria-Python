@@ -3,19 +3,22 @@
 <html lang="en">
 
 <head>
-
+    <link rel="stylesheet" type="text/css" href="{% static '/apps/Veterinaria/templates/style.css' %}">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{%block titulo%} {%endblock%}</title> 
 </head>
 <body>
+
 <section class="portada">
     <div class="cartel">
         <h1>¡Bienvenido a la Veterinaria!</h1>
-        <h2>Registra a tu cliente, a su mascota y actualiza su historia clinica.</h2>
+        <h2>Registra a tu cliente, a su mascota y actualiza su historia clinica.
+        </h2>
     </div>
-    {%block contenido%} {%endblock%}
+    {%block contenido%}{%endblock%}
+<br><a href="./editarcliente">Ir a Clientes</a> 
 </section>
 </body>
 </html>
